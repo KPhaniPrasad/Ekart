@@ -29,3 +29,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'shopping'
     publishLocation: 'Container'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'sampledevapp'
+    repository: 'sampledevapp'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
