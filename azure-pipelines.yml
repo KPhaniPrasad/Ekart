@@ -27,3 +27,9 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'EKART'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'ACR'
+    repository: 'Hellotestdev'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
