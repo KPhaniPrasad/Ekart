@@ -33,3 +33,8 @@ steps:
     repository: 'Hellotestdev'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'sonarqube'
+    scannerMode: 'CLI'
+    configMode: 'file'
