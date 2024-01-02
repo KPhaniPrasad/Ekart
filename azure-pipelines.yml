@@ -38,4 +38,4 @@ steps:
     extraProperties: 'sonar.java.binaries=.'
 - task: SonarQubeAnalyze@5
   inputs:
-    jdkversion: 'JAVA_HOME_11_X64'
+    jdkversion: 'JAVA_HOME_17_X64'
