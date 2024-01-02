@@ -31,10 +31,7 @@ steps:
   inputs:
     SonarQube: 'sonarqube'
     scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'shopping-cart'
-    cliProjectName: 'shopping-cart'
-    cliSources: '.'
+    configMode: 'file'
     extraProperties: 'sonar.java.binaries=.'
 - task: SonarQubeAnalyze@5
   inputs:
