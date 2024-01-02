@@ -27,15 +27,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'EKART'
     publishLocation: 'Container'
-- task: SonarQubePrepare@5
+- task: dependency-check-build-task@6
   inputs:
-    SonarQube: 'sonar'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'Shopping-cart'
-    cliProjectName: 'Shopping-cart'
-    cliSources: '.'
-    extraProperties: 'sonar.java.binaries=.'
-- task: SonarQubeAnalyze@5
-  inputs:
-    jdkversion: 'JAVA_HOME_11_X64'
+    projectName: 'shopping-cart'
+    scanPath: '.'
+    format: 'HTML'
